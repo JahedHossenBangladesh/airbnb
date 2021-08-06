@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 shadow-md py-3 px-5">
+    <header className="sticky top-0 z-50 grid bg-white grid-cols-3 shadow-md py-3 px-5">
       <div className="relative flex items-center h-10 cursor-pointer">
         <Image
           src="https://i.ibb.co/4mN3gSw/Airbnb-Logo-B-lo-svg.png"
