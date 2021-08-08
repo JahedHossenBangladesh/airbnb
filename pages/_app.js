@@ -1,12 +1,11 @@
 import Router from 'next/router';
 import { useState } from 'react';
+import { HourGlass } from "react-awesome-spinners";
+import {
+  MeteorRainLoading, SemipolarLoading, TransverseLoading
+} from "react-loadingg";
 import 'tailwindcss/tailwind.css';
 import '../styles/global.css';
-import {
-  SemipolarLoading,
-  MeteorRainLoading,
-  TransverseLoading,
-} from "react-loadingg";
 
 
 
@@ -24,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       {loading && (
         <div>
           <SemipolarLoading />
+        
           <TransverseLoading />
           <MeteorRainLoading />
         </div>
