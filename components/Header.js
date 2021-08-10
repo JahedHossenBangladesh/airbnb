@@ -23,6 +23,7 @@ const handleSelect=(ranges)=>{
     setEndDate(ranges.selection.endDate)
   
   }
+
 const reSetSearch = () => {
   setSearch("");
 }

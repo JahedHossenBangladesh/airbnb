@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import { useRouter } from "next/dist/client/router";
+import { useState } from 'react';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
@@ -7,7 +8,11 @@ import InfoCard from "../components/InfoCard";
 
 
 function Search({searchResult}) {
-    
+  const [makeColor,setMakeColor] = useState(false);
+ const changeTheColor= () =>{
+    setMakeColor(true);
+ 
+ }
     const router = useRouter()
     console.log(searchResult);
     const {location,startDate,endDate,numOfGuests} =router.query;
@@ -18,6 +23,7 @@ const range = `${formatStartDate} - ${formatEndDate}`
       <div>
         <Header
           placeholder={`${location} | ${range} | ${numOfGuests} guests`}
+        
         />
         <main className="flex">
           <section className="flex-grow mt-14 px-6">
@@ -29,12 +35,12 @@ const range = `${formatStartDate} - ${formatEndDate}`
               <p className="button">Cancellation Flexibility </p>
               <p className="button ">Type of Place</p>
               <p className="button ">Price </p>
-              <p className="button">Rooms and Beds</p>
+              <p className="button" onClick={changeTheColor}>Rooms and Beds</p>
               <p className="button">More Filters</p>
             </div>
             <div className="flex flex-col">
               {searchResult?.map((item) => (
-                <InfoCard key={item.length} item={item} />
+                <InfoCard key={item.length} item={item} colors={makeColor} />
               ))}
             </div>
           </section>
