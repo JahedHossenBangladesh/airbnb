@@ -1,6 +1,6 @@
 # Next.js + Tailwind CSS Example
 
-Live Link [`Just-in-Time Mode`](https://airbnb-by-jahed.netlify.app/) for Live Link.
+Live Link [`Live Link`](https://airbnb-by-jahed.netlify.app/) for Live Link.
 
 ## Preview
 
