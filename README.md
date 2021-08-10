@@ -1,4 +1,4 @@
-# Next.js + Tailwind CSS Example
+#  Traveler Hotel make by Next.js 
 
 [`Live Link`](https://airbnb-by-jahed.netlify.app/) 
 
