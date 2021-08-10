@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import Map from '../components/Map';
  
 
 
@@ -23,7 +24,6 @@ const range = `${formatStartDate} - ${formatEndDate}`
       <div>
         <Header
           placeholder={`${location} | ${range} | ${numOfGuests} guests`}
-        
         />
         <main className="flex">
           <section className="flex-grow mt-14 px-6">
@@ -35,7 +35,9 @@ const range = `${formatStartDate} - ${formatEndDate}`
               <p className="button">Cancellation Flexibility </p>
               <p className="button ">Type of Place</p>
               <p className="button ">Price </p>
-              <p className="button" onClick={changeTheColor}>Rooms and Beds</p>
+              <p className="button" onClick={changeTheColor}>
+                Rooms and Beds
+              </p>
               <p className="button">More Filters</p>
             </div>
             <div className="flex flex-col">
@@ -43,6 +45,16 @@ const range = `${formatStartDate} - ${formatEndDate}`
                 <InfoCard key={item.length} item={item} colors={makeColor} />
               ))}
             </div>
+          </section>
+          {/* <section className="hidden xl:inline-flex
+           xl:min-w-[600px]
+           "> */}
+
+          <section
+            className="min-w-[600px]
+           "
+          >
+            <Map  searchResult={searchResult}/>
           </section>
         </main>
         <Footer />
